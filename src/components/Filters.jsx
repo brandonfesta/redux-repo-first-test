@@ -1,4 +1,11 @@
-export default function Filters({ setFilter }) {
+import { useDispatch } from "react-redux";
+import { setCategoryFilter } from "../features/filters/filtersSlice";
+
+export default function Filters() {
+  const dispatch = useDispatch()
+  function setFilter(newCategory){
+    dispatch(setCategoryFilter(newCategory))
+  }
   return (
     <div className="filters-container flex gap-2 items-center my-4">
       Filtra:
