@@ -1,7 +1,13 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { setTextFilter } from "../features/filters/filtersSlice";
 
 export default function TextFilter() {
   const dispatch = useDispatch()
+  const textFilter = useSelector(state => state.filters.TextFilter)
+  
+  function handleTextChange(text){
+    dispatch(setTextFilter(text))
+  }
   
   return (
     <input
@@ -10,7 +16,7 @@ export default function TextFilter() {
       value={textFilter}
 
       onChange={(event) => {
-        setTextFilter(event.target.value);
+        handleTextChange(event.target.value);
       }}
     />
   );

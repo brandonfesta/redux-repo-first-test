@@ -12,25 +12,6 @@ function App({ savedTasks }) {
   const count = useSelector(state => state.counter.value)
   // Inizializzo l'elenco di task con l'elenco di task presenti in localStorage, OPPURE con un array vuoto)
 
-  // filtro in base alla stringa contenuta in filter ("tutti" "rimasti" "completati")
-  // let filteredTasks = tasks
-  //   .filter((task) => {
-  //     // se filter corrisponde a "completati", ritorno i task con proprietà isCompleted impostata a true
-  //     if (filter === "completati") return task.isCompleted;
-  //     // se filter corrisponde a "rimasti", ritorno i task con proprietà isCompleted impostata a false (uso l'operatore NOT (!))
-  //     if (filter === "rimasti") return !task.isCompleted;
-  //     // se filter corrisponde a "tutti", allora ritorno true per ogni task dell'array
-  //     if (filter === "tutti") return true;
-  //   })
-  //   .filter((task) => {
-  //     return task.name.toLowerCase().includes(textFilter.toLowerCase());
-  //   });
-
-  // useEffect(() => {
-  //   // salvo i tasks in lcalStorage
-  //   localStorage.setItem("otasks", JSON.stringify(tasks));
-  // }, [tasks]);
-
   return (
     <>
       {/* <Card>
